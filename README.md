@@ -4,11 +4,10 @@ A powerful, dark-themed Next.js frontend built to interface with streaming AI ag
 
 ## 🏛️ Architecture
 
-![Architecture Diagram](architecture.png)
-
 The application follows an event-driven architecture centered around a sequence-aware WebSocket client. All incoming protocol events pass through a deduplication and reordering layer before being processed, ensuring correct behavior during out-of-order delivery, duplicate messages, connection drops, and replay recovery.
 
 UI rendering is separated into three independent domains: Chat, Timeline, and Context Inspector. The client tracks the highest fully processed sequence number and uses the RESUME protocol to recover missed events after reconnection, allowing agent responses, tool calls, and context updates to continue seamlessly even in chaos mode.
+<img width="1672" height="1680" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/959289cc-5c69-49d7-aa35-3c1a85f1bb26" />
 
 ## ✨ Features
 
