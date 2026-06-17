@@ -48,10 +48,5 @@ npm run dev
 
 ### 3. Connect
 Open your browser and navigate to [http://localhost:3000](http://localhost:3000). The frontend will automatically attempt to connect to the agent-server. If the connection drops, it will infinitely attempt to reconnect every 2 seconds.
+<img width="1528" height="722" alt="image" src="https://github.com/user-attachments/assets/f849c275-fb01-4b6c-84e0-845ddda20bbd" />
 
-## 📡 WebSocket Protocol Specifications
-This client expects specific JSON payloads from the backend, such as:
-- `TOKEN`: Appends text to the active streaming message.
-- `STREAM_END`: Seals the current AI response.
-- `CONTEXT_SNAPSHOT`: Updates the state of the agent's memory/context.
-- `TOOL_CALL` / `TOOL_RESULT`: Displays background actions the agent is taking.
