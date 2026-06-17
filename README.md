@@ -25,20 +25,29 @@ UI rendering is separated into three independent domains: Chat, Timeline, and Co
 - **Network:** Native WebSockets
 - **Language:** TypeScript
 
-## 🚀 Getting Started
+## 🚀 Running Against the Agent Server
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+To run this application locally, you need both the frontend client and the backend agent-server running simultaneously.
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+### 1. Start the Agent Server
+First, ensure the backend agent-server is running. The client expects the server to be listening for WebSocket connections on port `4747`.
+- Navigate to your agent-server directory.
+- Start the server (e.g., `python main.py` or equivalent start command).
+- Verify the server is listening at `ws://localhost:4747/ws`.
 
-3. **Connect the Backend:**
-   Ensure your WebSocket backend is running on `ws://localhost:4747/ws`. The client will automatically connect and listen for events.
+### 2. Start the Frontend Client
+Once the backend is active, open a new terminal for the frontend:
+
+```bash
+# Install the necessary dependencies
+npm install
+
+# Start the Next.js development server
+npm run dev
+```
+
+### 3. Connect
+Open your browser and navigate to [http://localhost:3000](http://localhost:3000). The frontend will automatically attempt to connect to the agent-server. If the connection drops, it will infinitely attempt to reconnect every 2 seconds.
 
 ## 📡 WebSocket Protocol Specifications
 This client expects specific JSON payloads from the backend, such as:
