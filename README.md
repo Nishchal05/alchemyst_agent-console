@@ -48,5 +48,7 @@ npm run dev
 
 ### 3. Connect
 Open your browser and navigate to [http://localhost:3000](http://localhost:3000). The frontend will automatically attempt to connect to the agent-server. If the connection drops, it will infinitely attempt to reconnect every 2 seconds.
+
+Normal mode showing
 <img width="1528" height="722" alt="image" src="https://github.com/user-attachments/assets/f849c275-fb01-4b6c-84e0-845ddda20bbd" />
 
